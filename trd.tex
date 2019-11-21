@@ -1,0 +1,111 @@
+\documentclass[a4paper]{article}
+\usepackage[pdftex]{geometry}
+\usepackage[utf8]{inputenc}
+
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{courier}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{lastpage}
+
+\lstset{columns=fullflexible}
+\lstset{basicstyle=\scriptsize\ttfamily}
+\lstset{showspaces=false}
+\lstset{showstringspaces=false}
+%
+\geometry{portrait}
+\setlength{\topmargin}{-0.5in}
+\setlength{\oddsidemargin}{-0.5in}
+%\setlength{\evensidemargin}{-in}
+\setlength{\columnsep}{1in}
+\setlength{\columnseprule}{0.2pt}
+\textwidth 185mm
+\textheight 250mm
+
+\pagestyle{fancy}
+\lhead{Nizhny Novgorod Branch of NRU HSE (Doroshenko, Orlova, Zarkov)}
+\chead{}
+\rhead{\thepage\ of \pageref{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+
+%% Номера формул
+\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+
+\newcommand{\includecpp}[2]{
+	\subsection{#1}\
+	\lstinputlisting[language=c++, breaklines=true]{#2}
+}
+
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+
+\begin{document}
+	\thispagestyle{fancy}
+	\pagenumbering{Roman}
+	
+	\begin{center}
+		\Huge\textsc{ACM-ICPC Team Reference Document}
+		
+		\huge HSE-NN 2
+		
+		\vspace{0.50cm}
+	\end{center}
+	
+	\begin{multicols*}{2}
+		\tableofcontents
+		
+		\pagenumbering{arabic}
+		\setcounter{page}{1}
+		%\input{contents.tex}
+	\end{multicols*}
+	\enlargethispage*{\baselineskip}
+	\pagebreak
+	
+	% == CONTENTS == %
+	
+	\pagenumbering{arabic}
+	\setcounter{page}{2}
+	%
+	\begin{multicols*}{2}
+		\section{Шаблон}
+		\lstinputlisting[language=C++]{fcpp/template.cpp}
+		\section{Алгоритмы на строки}
+		\subsection{Префикс-функция}
+		\lstinputlisting[language=C++]{fcpp/pfunc.cpp}
+		\subsection{Z-функция}
+		\lstinputlisting[language=C++]{fcpp/zfunc.cpp}
+		\section{Алгоритмы на графах}
+		\subsection{Алгоритм Дейкстры $O(n^2)$}
+		was - брали вершину или нет \\
+		v - список смежности \\
+		d - массив расстояний для точки x
+		\\
+		\\
+		\\
+		\\
+		\\
+		\lstinputlisting[language=C++]{fcpp/dijkstra-n2.cpp}
+		\subsection{Алгоритм Дейкстры $O(log(n) \cdot m)$}
+		d - массив расстояний для точки x
+		\lstinputlisting[language=C++]{fcpp/dijkstra-nm.cpp}
+	\end{multicols*}
+\end{document}
