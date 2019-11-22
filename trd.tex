@@ -101,11 +101,27 @@
 		\\
 		\\
 		\\
-		\\
-		\\
 		\lstinputlisting[language=C++]{fcpp/dijkstra-n2.cpp}
 		\subsection{Алгоритм Дейкстры $O(log(n) \cdot m)$}
 		d - массив расстояний для точки x
 		\lstinputlisting[language=C++]{fcpp/dijkstra-nm.cpp}
+		\section{Простые алгоритмы}
+		\subsection{Решето Эратосфена $O(n)$}
+		pr - все простые числа до n \\
+		lp - минимальный простой делитель числа i
+		\lstinputlisting[language=C++]{fcpp/resheto-n.cpp}
+		\subsection{Решето Эратосфена \\ $O(n \cdot log(log(n)))$}
+		d[i] == 1 если число i простое
+		\lstinputlisting[language=C++]{fcpp/resheto-nloglogn.cpp}
+		
+		
+		\section{Структуры данных}
+		\subsection{Дерево отрезков}
+		\lstinputlisting[language=C++]{fcpp/subtree.cpp}
+		 Прибавление на отрезке
+		 \lstinputlisting[language=C++]{fcpp/subtree-add.cpp}
+		 Присвоение на отрезке
+		 \lstinputlisting[language=C++]{fcpp/subtree-push.cpp}
+		 TODO: Присвоение на отрезке с получением суммы
 	\end{multicols*}
 \end{document}
