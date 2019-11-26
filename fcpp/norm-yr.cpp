@@ -1,0 +1,1 @@
+int a = y1 - y2; int b = x2 - x1; int c = x1*y2 - x2*y1;
