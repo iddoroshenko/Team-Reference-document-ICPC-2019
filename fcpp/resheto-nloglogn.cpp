@@ -1,4 +1,12 @@
 long long d[10000000];
+
+
+
+
+
+
+
+
 void calc_p(int n)
 {
 	d[0] = 1;

@@ -1,4 +1,3 @@
-
 const int N = 10001000;
 int lp[N + 1];
 vector<int> pr;
@@ -8,7 +7,8 @@ void pcalc() {
             lp[i] = i;
             pr.push_back(i);
         }
-        for (int j = 0; j < (int) pr.size() && pr[j] <= lp[i] && i * pr[j] <= N; ++j)
+        for (int j = 0; j < (int) pr.size() && 
+			pr[j] <= lp[i] && i * pr[j] <= N; ++j)
             lp[i * pr[j]] = pr[j];
     }
 }

@@ -1,10 +1,14 @@
-
 const int mod = 1000000000 + 7;
-const int q = 1009;
- 
+const int q = 1009; 
 vector <ll> ph;
 vector <ll> pq;
- 
+void pq_put()
+{
+	pq.pb(1);
+	for (size_t i = 1; i < 100000; ++i)
+		pq.pb((pq[i - 1] * q) % mod);
+}
+
 ll hashing(string s)
 {
 	ll h = 0;
@@ -16,12 +20,7 @@ ll hashing(string s)
 	}
 	re h;
 }
-void pq_put()
-{
-	pq.pb(1);
-	for (size_t i = 1; i < 100000; ++i)
-		pq.pb((pq[i - 1] * q) % mod);
-}
+
 ll get(int l, int r)
 {
 	ll ans = ph[r];
