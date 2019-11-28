@@ -100,6 +100,12 @@
 		\lstinputlisting[language=C++]{fcpp/palindromes_count1.cpp}
 		Для подпалиндромов чётной длины
 		\lstinputlisting[language=C++]{fcpp/palindromes_count2.cpp}
+		\subsection{Суффиксный массив}
+		Построение $O (n log n) $
+		\lstinputlisting[language=C++]{fcpp/sm.cpp}
+		Наибольший общий префикс двух подстрок
+		\lstinputlisting[language=C++]{fcpp/lcp.cpp}
+		
 		
 		\section{Алгоритмы на графах}
 		\subsection{Алгоритм Дейкстры $O(n^2)$}
@@ -131,6 +137,8 @@
 		\lstinputlisting[language=C++]{fcpp/topological_sort.cpp}
 		\subsection{Алгоритм Куна нахождения наибольшего паросочетания в двудольном графе}
 		\lstinputlisting[language=C++]{fcpp/kuhn_matching.cpp}
+		\subsection{Венгерский алгоритм решения задачи о назначениях}
+		\lstinputlisting[language=C++]{fcpp/assignment_hungary.cpp}
 		
 		\section{Простые алгоритмы}		
 		\subsection{Решето Эратосфена $O(n)$}
@@ -306,6 +314,17 @@
 		  Количество неизоморфных упорядоченных бинарных деревьев с корнем и n + 1 листьями.
 		  
 		  Количество всевозможных способов линеаризации декартова произведения 2 линейных упорядоченных множеств: из 2 и из n элементов.
+		  \subsection{Число и сумма делителей}
+		  Число делителей
+		  
+		  $r(\alpha) = (\alpha_1 + 1)(\alpha_2 +1)...(\alpha_k+1)$
+		  
+		  Сумма делителей
+		  
+		  $S(\alpha) = \frac{p^{{\alpha_1}+1}_{1} - 1}{p_1 - 1} \frac{p^{{\alpha_2}+1}_{2} - 1}{p_2 - 1} ... \frac{p^{{\alpha_k}+1}_{k} - 1}{p_k - 1}$
+		  \subsection{Биномиальные коэффициенты}
+		  \lstinputlisting[language=C++]{fcpp/c.cpp}
+		  
 		  \section{Динамическое программирование}
 		  \subsection{Рюкзак}
 		  Задача из семейства, в которой стоимость предмета совпадает с его весом.
