@@ -20,12 +20,10 @@ void inc (int i, int delta)
 	for (; i < n; i = (i | (i+1)))
 		t[i] += delta;
 }
-
 int sum (int l, int r)
 {
 	return sum (r) - sum (l-1);
 }
-
 void init (vector<int> a)
 {
 	init ((int) a.size());

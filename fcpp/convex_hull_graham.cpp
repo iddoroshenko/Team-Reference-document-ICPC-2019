@@ -23,12 +23,15 @@ void convex_hull (vector<pt> & a) {
 	down.push_back (p1);
 	for (size_t i=1; i<a.size(); ++i) {
 		if (i==a.size()-1 || cw (p1, a[i], p2)) {
-			while (up.size()>=2 && !cw (up[up.size()-2], up[up.size()-1], a[i]))
+			while (up.size()>=2 &&
+			!cw (up[up.size()-2], up[up.size()-1], a[i]))
 				up.pop_back();
 			up.push_back (a[i]);
 		}
 		if (i==a.size()-1 || ccw (p1, a[i], p2)) {
-			while (down.size()>=2 && !ccw (down[down.size()-2], down[down.size()-1], a[i]))
+			while (down.size()>=2 &&
+			!ccw (down[down.size()-2], 
+			down[down.size()-1], a[i]))
 				down.pop_back();
 			down.push_back (a[i]);
 		}

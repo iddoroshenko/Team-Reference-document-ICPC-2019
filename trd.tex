@@ -1,7 +1,6 @@
 \documentclass[a4paper]{article}
 \usepackage[pdftex]{geometry}
 \usepackage[utf8]{inputenc}
-
 \usepackage{listings}
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -96,6 +95,11 @@
 		\lstinputlisting[language=C++]{fcpp/zfunc.cpp}
 		\subsection{Хеширование}
 		\lstinputlisting[language=C++]{fcpp/hash.cpp}
+		\subsection{Нахождение всех подпалиндромов}
+		Для случая подпалиндромов нечётной длины
+		\lstinputlisting[language=C++]{fcpp/palindromes_count1.cpp}
+		Для подпалиндромов чётной длины
+		\lstinputlisting[language=C++]{fcpp/palindromes_count2.cpp}
 		
 		\section{Алгоритмы на графах}
 		\subsection{Алгоритм Дейкстры $O(n^2)$}
@@ -123,6 +127,10 @@
 		\lstinputlisting[language=C++]{fcpp/cutpoints.cpp}
 		\subsection{Нахождение отрицательного цикла в графе}
 		\lstinputlisting[language=C++]{fcpp/negative_cycle.cpp}
+		\subsection{Топологическая сортировка}
+		\lstinputlisting[language=C++]{fcpp/topological_sort.cpp}
+		\subsection{Алгоритм Куна нахождения наибольшего паросочетания в двудольном графе}
+		\lstinputlisting[language=C++]{fcpp/kuhn_matching.cpp}
 		
 		\section{Простые алгоритмы}		
 		\subsection{Решето Эратосфена $O(n)$}
@@ -298,6 +306,65 @@
 		  Количество неизоморфных упорядоченных бинарных деревьев с корнем и n + 1 листьями.
 		  
 		  Количество всевозможных способов линеаризации декартова произведения 2 линейных упорядоченных множеств: из 2 и из n элементов.
+		  \section{Динамическое программирование}
+		  \subsection{Рюкзак}
+		  Задача из семейства, в которой стоимость предмета совпадает с его весом.
+		  \lstinputlisting[language=C++]{fcpp/chest1.cpp}
+		  \subsection{Наибольшая возрастающая подпоследовательность}
+		  \lstinputlisting[language=C++]{fcpp/ncp.cpp}
+		  \section{Геометрия 2}
+		  \lstinputlisting[language=C++]{fcpp/geo.cpp}
+		  \subsection{Формулы}
+		  Площадь треугольника через две стороны и
+		  угол между ними$S = \frac{1}{2}ab\cdot siny$
+		  
+		 Площадь треугольника через радиус
+		 описанной окружности $ S = \frac{abc}{4R} $
 		 
+		 Формула медианы 
+		 $ m = \frac{1}{2} \sqrt{2(b^2 + c^ 2) - a^2}$
+		 
+		 Формула высоты
+		 $ h = \frac{2}{a} \sqrt{p(p-a)(p-b)(p-c)} $
+		 
+		 Теорема косинусов
+		 $ a^2 = b^2 + c^2 – 2bc\cdot cos a$
+		 
+		 Радиус окружности, вписанной в правильный
+		 треугольник
+		 $r = \frac{a\sqrt{3}}{3} $
+		 
+		 Радиус окружности, вписанной в
+		 прямоугольный треугольник
+		 $r = \frac{a+b-c}{2} $
+		 
+		 Радиус окружности, описанной около
+		 прямоугольного треугольника
+		 $R = \frac{c}{2} $
+		 
+		 Площадь правильного треугольника
+		 $ S = \frac{a^2 \sqrt{3}}{4} $
+		 
+		 Объем шарового сегмента
+		 $ V = \pi h^2(R-\frac{1}{3}h) $
+		 
+		 Площадь сегмента круга
+		 $ S = \frac{1}{2}R^2(\frac{\pi\alpha}{180^{\circ}} - sin a) $
+		 
+		 \subsection{Тригонометрия}
+		 $\operatorname {sin}^{2}\alpha +\operatorname {cos}^{2}\alpha =1$ \\
+		 $\operatorname {tg}^{2}\alpha +1={\frac {1}{\cos ^{2}\alpha }}=\operatorname {sec}^{2}\alpha $ \\
+		 $\operatorname {ctg}^{2}\alpha +1={\frac {1}{\sin ^{2}\alpha }}=\operatorname {cosec}^{2}\alpha $ \\
+		 ${\displaystyle \operatorname {tg} \alpha \cdot \operatorname {ctg} \alpha =1}$ \\
+		 $\sin \left(\alpha \pm \beta \right)=\sin \alpha \cos \beta \pm \cos \alpha \sin \beta $\\
+		 $\cos \left(\alpha \pm \beta \right)=\cos \alpha \cos \beta \mp \sin \alpha \sin \beta $
+		 $\operatorname {tg}\left(\alpha \pm \beta \right)={\frac {\operatorname {tg}\alpha \pm \operatorname {tg}\beta }{1\mp \operatorname {tg}\alpha \operatorname {tg}\beta }}$ \\
+		 $\sin \alpha \sin \beta ={\frac {\cos(\alpha -\beta )-\cos(\alpha +\beta )}{2}}$\\
+		 $\sin \alpha \cos \beta ={\frac {\sin(\alpha -\beta )+\sin(\alpha +\beta )}{2}}$\\
+		 $\cos \alpha \cos \beta ={\frac {\cos(\alpha -\beta )+\cos(\alpha +\beta )}{2}}$\\
+		 $\sin \alpha \pm \sin \beta =2\sin {\frac {\alpha \pm \beta }{2}}\cos {\frac {\alpha \mp \beta }{2}}$ \\
+		 $\cos \alpha +\cos \beta =2\cos {\frac {\alpha +\beta }{2}}\cos {\frac {\alpha -\beta }{2}}$ \\
+		 $\cos \alpha -\cos \beta =-2\sin {\frac {\alpha +\beta }{2}}\sin {\frac {\alpha -\beta }{2}}$\\
+		 $\operatorname {tg}\alpha \pm \operatorname {tg}\beta ={\frac {\sin(\alpha \pm \beta )}{\cos \alpha \cos \beta }}$ \\
 	\end{multicols*}
 \end{document}

@@ -9,7 +9,6 @@ void update (int v, int vl, int vr, int l, int r, int add) {
         update (v*2+2, c+1, vr, max(l,c+1), r, add);
     }
 }
-
 int get (int v, int vl, int vr, int pos) {
     if (vl == vr)
         return t[v];
